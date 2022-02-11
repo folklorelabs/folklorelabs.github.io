@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+}
+  
+body {
+  margin: 0;
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fff;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.Main {
+  position: relative;
+  background: #fff;
+  display: flex;
+  flex: 1;
+}
+.Main-inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  overflow: hidden;
+}
+
+.Logo {
+  position: relative;
+  font-size: 10vw;
+  padding: 0 0.25em 0.1em;
+  line-height: 1em;
+  /* background-color: rgba(255, 255, 255, 1); */
+}
+@media only screen and (max-width: 700px) {
+  .Logo {
+    font-size: 70px;
+  }
+}
+@media only screen and (min-width: 980px) {
+  .Logo {
+    font-size: 98px;
+  }
+}
+
+.Logo::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  background-color: #000;
+  transform: skew(-7deg, -1.25deg);
+}
+.Logo-text {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  color: #fff;
+  font-weight: 400;
+  font-family: "East Sea Dokdo", sans-serif;
+  font-size: 1em;
+}
