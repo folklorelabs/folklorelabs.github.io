@@ -9,7 +9,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #fff;
   font-size: 16px;
-  letter-spacing: 0.05em;
   overflow-y: scroll;
   overflow-x: hidden;
 }
@@ -22,7 +21,6 @@ body {
 
 .Main {
   position: relative;
-  background: #fff;
   display: flex;
   flex: 1;
 }
@@ -31,30 +29,43 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   flex: 1;
   overflow: hidden;
 }
 
 .Logo {
-  position: relative;
-  font-size: 10vw;
-  padding: 0 0.25em 0.1em;
+  margin-bottom: 5em;
   line-height: 1em;
-  /* background-color: rgba(255, 255, 255, 1); */
-}
-@media only screen and (max-width: 700px) {
-  .Logo {
-    font-size: 70px;
-  }
-}
-@media only screen and (min-width: 980px) {
-  .Logo {
-    font-size: 98px;
-  }
+  font-size: 5vw;
 }
 
-.Logo::before {
+.Logo-text {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+  font-weight: 400;
+  font-size: 1em;
+}
+
+.Logo-text[tabIndex] {
+  opacity: 0.05;
+}
+.Logo-text[tabIndex]:focus,
+.Logo-text[tabIndex]:hover {
+  opacity: 1;
+  outline: 0;
+}
+
+.Logo--dokidob {
+  position: relative;
+  padding: 0 0.25em 0.1em;
+  line-height: 1em;
+  font-size: 10vw;
+  letter-spacing: 0.05em;
+  /* background-color: rgba(255, 255, 255, 1); */
+}
+
+.Logo--dokidob::before {
   content: '';
   position: absolute;
   top: 0;
@@ -65,12 +76,46 @@ body {
   background-color: #000;
   transform: skew(-7deg, -1.25deg);
 }
-.Logo-text {
+.Logo--dokidob .Logo-text {
   position: relative;
-  display: inline-block;
-  margin: 0;
   color: #fff;
-  font-weight: 400;
   font-family: "East Sea Dokdo", sans-serif;
-  font-size: 1em;
+  margin: 0;
+}
+
+
+.Logo--dokido {
+  font-size: 10vw;
+  font-family: "East Sea Dokdo", sans-serif;
+}
+
+.Logo--Raleway {
+  font-family: "Raleway", sans-serif;
+}
+
+.Logo--ubuntu {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.Logo--ubuntucon {
+  font-family: "Ubuntu Condensed", sans-serif;
+}
+
+.Logo--jose {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.Logo--indie {
+  font-family: "Indie Flower", sans-serif;
+  letter-spacing: 0.05em;
+}
+@media only screen and (max-width: 620px) {
+  .Logo--indie {
+    font-size: 31px;
+  }
+}
+@media only screen and (min-width: 980px) {
+  .Logo--indie {
+    font-size: 49px;
+  }
 }
