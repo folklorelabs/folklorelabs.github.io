@@ -33,8 +33,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   flex: 1;
   overflow: hidden;
+}
+.Test .Main-inner {
+  justify-content: flex-start;
 }
 .Logo {
   line-height: 1em;
@@ -89,9 +93,19 @@ body {
 }
 
 
-.Logo--dokido {
+.Logo--dokidob {
   font-size: 10vw;
   font-family: "East Sea Dokdo", sans-serif;
+}
+@media only screen and (max-width: 500px) {
+  .Logo--dokidob {
+    font-size: 50px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .Logo--dokidob {
+    font-size: 128px;
+  }
 }
 
 .Logo--Raleway {
