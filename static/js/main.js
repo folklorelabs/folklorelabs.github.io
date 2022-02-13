@@ -7,7 +7,8 @@ function random(minVal, maxVal) {
 function randomThemedColor(hue, saturation, lightness) {
     return {
         hue: hue || random(0, 360),
-        saturation: saturation || random(25, 95),
+        // saturation: saturation || random(25, 95),
+        saturation: 0,
         lightness: lightness || random(85, 95),
     };
 }
