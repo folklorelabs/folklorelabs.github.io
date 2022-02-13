@@ -18,6 +18,17 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
+
+.FullScreenBG {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .Header {
   position: relative;
   /* background: #fff; */
@@ -71,7 +82,6 @@ body {
   line-height: 1em;
   font-size: 10vw;
   letter-spacing: 0.05em;
-  /* background-color: rgba(255, 255, 255, 1); */
 }
 
 .Logo--dokidob::before {
@@ -82,7 +92,7 @@ body {
   bottom: 0;
   left: 0;
   display: block;
-  background-color: #000;
+  background-color: rgb(12, 12, 13);
   transform: skew(-7deg, -1.25deg);
 }
 .Logo--dokidob .Logo-text {
