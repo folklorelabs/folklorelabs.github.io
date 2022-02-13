@@ -290,8 +290,14 @@ body {
   background-color: transparent;
   border: transparent;
   font-weight: 700;
-  color: rgba(12, 12, 13);
+  color: #f3f3f3;
   /* text-decoration: none; */
+}
+.Main--isLight .AnchorText {
+  color: #0c0c0d;
+}
+.Main--isDark .AnchorText {
+  color: #f3f3f3;
 }
 .AnchorText:focus,
 .AnchorText:hover {
@@ -337,13 +343,6 @@ body {
   letter-spacing: 0.025em;
   text-transform: uppercase;
   font-size: 14px;
-  color: #f3f3f3;
-}
-.Main--isLight .Footer {
-  color: #0c0c0d;
-}
-.Main--isDark .Footer {
-  color: #f3f3f3;
 }
 .Footer::after {
   transform: translate(-50%, 93%);
