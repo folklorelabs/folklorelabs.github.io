@@ -337,13 +337,13 @@ body {
   letter-spacing: 0.025em;
   text-transform: uppercase;
   font-size: 14px;
-  color: #0c0c0d;
-}
-.Main--isLight .Footer {
   color: #f3f3f3;
 }
-.Main--isDark .Footer {
+.Main--isLight .Footer {
   color: #0c0c0d;
+}
+.Main--isDark .Footer {
+  color: #f3f3f3;
 }
 .Footer::after {
   transform: translate(-50%, 93%);
