@@ -1,4 +1,4 @@
-var IS_DARK = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+var IS_DARK = true; //window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 var MAX_NODES = 500;
 
 if (IS_DARK) {
