@@ -38,6 +38,7 @@ body {
   position: relative;
   display: flex;
   flex: 1;
+  background: rgb(12, 12, 13);
 }
 .Main-inner {
   position: relative;
