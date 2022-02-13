@@ -1,4 +1,11 @@
+var IS_DARK = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 var MAX_NODES = 500;
+
+if (IS_DARK) {
+    document.querySelector('.Main').classList.add('Main--isDark');
+} else {
+    document.querySelector('.Main').classList.add('Main--isLight');
+}
 
 function random(minVal, maxVal) {
     return Math.random() * (maxVal - minVal) + minVal;
@@ -9,7 +16,7 @@ function randomThemedColor(hue, saturation, lightness) {
         hue: hue || random(0, 360),
         // saturation: saturation || random(25, 95),
         saturation: 0,
-        lightness: lightness || random(85, 95),
+        lightness: lightness || !IS_DARK ? random(75, 90) : random(10, 25),
     };
 }
 
