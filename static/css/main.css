@@ -4,12 +4,11 @@
   
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Rubik', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 body {
@@ -284,4 +283,68 @@ body {
   to {
     transform: translateX(-50%);
   }
+}
+
+.AnchorText {
+  cursor: pointer;
+  background-color: transparent;
+  border: transparent;
+  font-weight: 700;
+  color: rgba(12, 12, 13);
+  /* text-decoration: none; */
+}
+.AnchorText:focus,
+.AnchorText:hover {
+  text-decoration: underline;
+}
+
+.TextIcon {
+  position: relative;
+}
+.TextIcon::before {
+  content: "";
+  display: inline-block;
+  background-size: contain;
+  background-position: center;
+  aspect-ratio: 1;
+  width: 1.5em;
+  margin: -0.2em 0.5em 0;
+  vertical-align: middle;
+  position: absolute;
+  right: 100%;
+}
+.TextIcon--discord::before {
+  background-image: url("http://www.google.com/s2/favicons?domain=https://discord.com");
+  margin: -0.3em 0.3em 0;
+}
+.TextIcon--twitter::before {
+  background-image: url("http://www.google.com/s2/favicons?domain=https://twitter.com");
+}
+.TextIcon--opensea::before {
+  background-image: url("http://www.google.com/s2/favicons?domain=https://opensea.io");
+}
+.TextIcon--pinata::before {
+  background-image: url("http://www.google.com/s2/favicons?domain=https://www.pinata.cloud/");
+}
+
+
+.Footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.Footer::after {
+  transform: translate(-50%, 93%);
+}
+.FooterSection {
+  position: relative;
+  z-index: 1;
+}
+.Footer .AnchorText {
+  text-decoration: none;
 }
