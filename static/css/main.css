@@ -291,7 +291,8 @@ body {
   border: transparent;
   font-weight: 700;
   color: #f3f3f3;
-  /* text-decoration: none; */
+  margin-left: 1.9em;
+  text-decoration: none;
 }
 .Main--isLight .AnchorText {
   color: #0c0c0d;
@@ -308,29 +309,17 @@ body {
   position: relative;
 }
 .TextIcon::before {
-  content: "";
+  content: ''; 
   display: inline-block;
   background-size: contain;
   background-position: center;
   aspect-ratio: 1;
   width: 1.5em;
-  margin: -0.2em 0.5em 0;
+  margin: -0.2em 0.4em 0;
   vertical-align: middle;
   position: absolute;
   right: 100%;
-}
-.TextIcon--discord::before {
-  background-image: url("http://www.google.com/s2/favicons?domain=https://discord.com");
-  margin: -0.3em 0.3em 0;
-}
-.TextIcon--twitter::before {
-  background-image: url("http://www.google.com/s2/favicons?domain=https://twitter.com");
-}
-.TextIcon--opensea::before {
-  background-image: url("http://www.google.com/s2/favicons?domain=https://opensea.io");
-}
-.TextIcon--pinata::before {
-  background-image: url("http://www.google.com/s2/favicons?domain=https://www.pinata.cloud/");
+  background-image: var(--icon);
 }
 
 
@@ -351,6 +340,12 @@ body {
   position: relative;
   z-index: 1;
 }
+.FooterSection--contact {
+  display: flex;
+  justify-content: center;
+  gap: 1.25em;
+}
 .Footer .AnchorText {
+  display: block;
   text-decoration: none;
 }
